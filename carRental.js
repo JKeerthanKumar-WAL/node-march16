@@ -4,7 +4,7 @@ const path = require("path");
 app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.send(
-    "<style>div{border: 4px solid green; background: lightseagreen; padding-left:5px;}h1{color:darkblue; text-align:center;}p{font-weight:bolder;}</style><div><h1>Welcome to Car Rental App</h1><p>1. To add car go to localhost:3001/addcar</p><p>2. To add car go to localhost:3001/showcar</p><p>3. To add car go to localhost:3001/login</p></div>"
+    "<style>div{border: 4px solid green; background: lightseagreen; padding-left:5px;}h1{color:darkblue; text-align:center;}p{font-weight:bolder;}</style><div><h1>Welcome to Car Rental App</h1><p>1. To add car, go to 'localhost:3001/addcar'</p><p>2. To display car details, go to 'localhost:3001/showcar'</p><p>3. For login, go to 'localhost:3001/login'</p></div>"
   );
 });
 app.get("/addcar", (req, res) => {
@@ -33,3 +33,4 @@ app
     }
   })
   .listen(3001);
+console.log("Running node on port 3001");
